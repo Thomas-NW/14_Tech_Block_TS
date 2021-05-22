@@ -1,0 +1,15 @@
+
+/* tech blog */
+
+header {
+    background-color: rgb(199, 170, 170);
+}
+
+main {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.comment-card {
+    width: 80%;
+}
