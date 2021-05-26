@@ -7,7 +7,7 @@
     <form class='form update-form'>
       <div class="mb-3">
         <label for="update-title" class="form-label">Current Blog Title: {{article.title}}</label>
-        <p>Created by: {{user.user_name}}</p>
+        <p>Created by: {{user_name}}</p>
         <p>Created by: {{article.author_id}}</p>
 
         {{#if showEdit}}
@@ -30,6 +30,8 @@
     </form>
 
 
+
+    {{!-- Comment Form - Section of Atricle Page --}}
     {{#if logged_in}}
     {{#unless showEdit}}
     <form class='from comment-form'>
@@ -40,13 +42,9 @@
       </div>
 
       <div class="mb-3">
-        <
         {{#each article.comments}}
         <div>{{this.comment}}</div>
         {{/each }}
-
-
-
       </div>
 
 
@@ -55,13 +53,6 @@
     {{/if}}
 
 
-    {{!-- {{#each article.comments}}
-    <div>{{this.comment}}</div>
-    {{/each }} --}}
-
-    {{!-- {{#each user.user_name}}
-    <div>{{this.user}}</div>
-    {{/each }} --}}
 
   </div>
 </div>

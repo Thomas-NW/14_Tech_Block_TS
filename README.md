@@ -28,6 +28,11 @@ No copyright (c) applied. Changes to this code do not require the approval of th
 ## Usage
 💻 This app is designed to take notes and apply comments to such.
 
+![Tech_Blog_LoggedIn](./Assets/Tech_Blog_LoggedIn.PNG)
+![Tech_Blog_LoggedIn](./Assets/Tech_Blog_Update_Delete.PNG)
+![Tech_Blog_LoggedIn](./Assets/Tech_Blog_Comment.PNG)
+
+
 
 ## Contributing
 👪 Many thanks to Tom McCarthy who helped me understanding the requirements and coding challanges for this api.
@@ -45,6 +50,7 @@ If you should have comments or suggestions for improvement, please send them to 
 HTML 5.0, CSS, JavaScript, json, Bootstrap, npm package, node.js
 
 ## Github reference 
+
 
 
 

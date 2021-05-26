@@ -18,11 +18,13 @@ router.get('/', async (req, res) => {
 
     // Serialize data so the template can read it
     const articles = articleData.map((article) => article.get({ plain: true }));
+    console.log('all the articles for homepage!!!', articles)
 
     // Pass serialized data and session flag into template
     res.render('homepage', { 
       articles, 
-      logged_in: req.session.loggedIn 
+      logged_in: req.session.loggedIn,
+      user_name: req.session.user_name
     });
   } catch (err) {
     res.status(500).json(err);
@@ -37,6 +39,8 @@ router.get('/articles/:id', async (req, res) => {
       include: [
         {
           model: Comment,
+          model: User,
+            attributes: ['user_name']
         },
       ],
     });
@@ -54,7 +58,8 @@ router.get('/articles/:id', async (req, res) => {
     res.render('articles', {
       article,
       logged_in: req.session.loggedIn,
-      showEdit: showEdit
+      showEdit: showEdit,
+      user_name: req.session.user_name
     });
   } catch (err) {
     res.status(500).json(err);

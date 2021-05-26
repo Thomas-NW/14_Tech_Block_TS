@@ -20,6 +20,7 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    // for testing and trail, I added email. Since it is not part of the project, I terminated it
     // email: {
     //   type: DataTypes.STRING,
     //   allowNull: false,

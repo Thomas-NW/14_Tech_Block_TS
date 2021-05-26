@@ -40,11 +40,20 @@
               <li class="nav-item">
                 <button class="nav-link shadow-none" id='logout'>Logout</button>
               </li>
+
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/">Logged in as: {{user.user_name}}</a>
-                how to display current user name on navigation bar in nodejs
+
+                {{#if logged_in}}
+
+                <a class="nav-link"> Logged In: {{user_name}}</a>
+
+                {{/if}}
+
+                {{!-- <a class="nav-link active" aria-current="page" href="/">Logged in as: {{user.user_name}}</a>
+                how to display current user name on navigation bar in nodejs --}}
 
               </li>
+
             </ul>  
         </div>
       </nav>

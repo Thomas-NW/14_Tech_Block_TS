@@ -22,6 +22,8 @@ router.post('/signup', async (req, res) => {
   }
 });
 
+
+
 // User Login
 router.post('/login', async (req, res) => {
   try {
@@ -53,6 +55,7 @@ router.post('/login', async (req, res) => {
     req.session.save(() => {
       req.session.loggedIn = true;
       req.session.user_id = dbUserData.id
+      req.session.user_name = dbUserData.user_name
 
       res
         .status(200)
@@ -63,6 +66,17 @@ router.post('/login', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+
+// //****************************** */
+// // Get ser login information from user db
+// router.get('/user/user_name', async (req, res) => {
+//   return res.render('user', user[user_name])
+//     });
+// console.log('testing the user', user)
+// //****************************** */
+
+
 
 // Logout
 router.post('/logout', (req, res) => {

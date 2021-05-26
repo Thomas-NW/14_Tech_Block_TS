@@ -8,7 +8,10 @@ router.get('/', async (req, res) => {
           attributes: ['user_name']
         }]
     });
-      res.status(200).json(commentData);
+
+    console.log('Do we know the user namess', user_name)
+
+    res.status(200).json(commentData);
 
       console.log('The article they are trying to view!!!', commentData)
 
