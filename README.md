@@ -35,7 +35,7 @@ No copyright (c) applied. Changes to this code do not require the approval of th
 
 
 ## Contributing
-👪 Many thanks to Tom McCarthy who helped me understanding the requirements and coding challanges for this api.
+👪 Many thanks to Tom McCarthy who helped me understanding the requirements and coding challanges for this api and resolving issues I faced.
 
 
 ## Tests
@@ -50,7 +50,7 @@ If you should have comments or suggestions for improvement, please send them to 
 HTML 5.0, CSS, JavaScript, json, Bootstrap, npm package, node.js
 
 ## Github reference 
-
+https://github.com/Thomas-NW/14_Tech_Block_TS.git
 
 
 
