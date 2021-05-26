@@ -1,38 +1,73 @@
+{{!-- Page reference example: http://localhost:3001/articles/13 --}}
+
 <link rel="stylesheet" href="/styles.css">
 <div class="card">
   <div class="card-body ms-3">
-    <h5 class="card-title bg-primary text-light p-3">Update Article</h5>
+    <h5 class="card-title bg-primary text-light p-3">Update Blog</h5>
     <form class='form update-form'>
       <div class="mb-3">
-        <label for="update-title" class="form-label">{{article.title}}</label>
+        <label for="update-title" class="form-label">Current Blog Title: {{article.title}}</label>
+        <p>Created by: {{user.user_name}}</p>
+        <p>Created by: {{article.author_id}}</p>
+
         {{#if showEdit}}
         <input type="text" class="form-control" id="update-title" aria-describedby="userNameHelp"
           value='{{article.title}}'>
         {{/if}}
       </div>
       <div class="mb-3">
-        <label for="update-content" class="form-label">{{article.content}}</label>
-        {{#if showEdit}}
+        <label for="update-content" class="form-label">Current Blog Content: {{article.content}}</label>
+      </div>
 
-        <textarea class="form-control" id="update-content">{{article.content}}
-        </textarea>
-        <button type="submit" class="btn btn-primary mt-2">Update Article</button>
-        <button type="submit" class="btn btn-danger mt-2 deleteBtn">Delete Article</button>
-        {{/if}}
+
+      {{#if showEdit}} {{!-- If (article.author_id === req.session.user_id) then enable textarea - see homeroutes.js
+      line
+      46 --}}
+      <textarea class="form-control" id="update-content">{{article.content}}</textarea>
+      <button type="submit" class="btn btn-primary mt-2">Update Blog</button>
+      <button type="submit" class="btn btn-danger mt-2 deleteBtn">Delete Blog</button>
+      {{/if}}
     </form>
 
 
-{{#unless showEdit}}
-<textarea id="comment-text" ></textarea>
-<button id='save-comment' name={{article.id}}>Save Comment</button>
+    {{#if logged_in}}
+    {{#unless showEdit}}
+    <form class='from comment-form'>
+      <h5 class="card-title bg-primary text-light p-3">Add a Comment</h5>
+      <textarea name={{article.id}} id="create-comment">{{comment.comment}}</textarea>
+      <div>
+        <button type="submit" id='save-comment' name={{comment.id}}>Save Comment</button>
+      </div>
+
+      <div class="mb-3">
+        <
+        {{#each article.comments}}
+        <div>{{this.comment}}</div>
+        {{/each }}
 
 
-{{/unless}}
+
+      </div>
 
 
+    </form>
+    {{/unless}}
+    {{/if}}
+
+
+    {{!-- {{#each article.comments}}
+    <div>{{this.comment}}</div>
+    {{/each }} --}}
+
+    {{!-- {{#each user.user_name}}
+    <div>{{this.user}}</div>
+    {{/each }} --}}
 
   </div>
 </div>
 
 <script src='/scripts/update.js'></script>
 <script src='/scripts/delete.js'></script>
+<script src='/scripts/logout.js'></script>
+<script src='/scripts/comment.js'></script>
+<script src='/scripts/script.js'></script>

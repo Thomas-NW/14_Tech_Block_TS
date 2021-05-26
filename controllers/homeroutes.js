@@ -41,7 +41,7 @@ router.get('/articles/:id', async (req, res) => {
       ],
     });
 
-    const article = ArticleData.get({ plain: true });
+    const article = ArticleData.get({ plain: true });  //plain:true provides the plain / core data from the model
 
     let showEdit = false
     if(article.author_id === req.session.user_id){

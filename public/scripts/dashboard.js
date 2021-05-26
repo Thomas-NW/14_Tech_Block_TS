@@ -8,7 +8,7 @@ const articleFormHandler = async (event) => {
   
     if (title && content) {
       // Send a POST request to the API endpoint
-      const response = await fetch('/api/articles', {
+      const response = await fetch('/api/articles/', {
         method: 'POST',
         body: JSON.stringify({ title, content }),
         headers: { 'Content-Type': 'application/json' },
@@ -22,6 +22,7 @@ const articleFormHandler = async (event) => {
       }
     }
   };
+
 
 document
 .querySelector('.article-form')

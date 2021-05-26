@@ -16,6 +16,7 @@ router.get('/', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
+  console.log('req/session when saving', req.session)
   try {
     const articleData = await Article.create({
       title: req.body.title,
