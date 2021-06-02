@@ -47,7 +47,7 @@ If you should have comments or suggestions for improvement, please send them to 
 
 
 ## Coding requirements
-HTML 5.0, CSS, JavaScript, json, Bootstrap, npm package, node.js
+HTML 5.0, CSS, JavaScript, json, Bootstrap, npm package, node.js 
 
 ## Github reference 
 https://github.com/Thomas-NW/14_Tech_Block_TS.git
