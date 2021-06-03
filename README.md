@@ -52,6 +52,9 @@ HTML 5.0, CSS, JavaScript, json, Bootstrap, npm package, node.js
 ## Github reference 
 https://github.com/Thomas-NW/14_Tech_Block_TS.git
 
+Heroku Site:
+https://techblogts.herokuapp.com/
+
 
 
 Thank you for visiting and reviewing the project. 
